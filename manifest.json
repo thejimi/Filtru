@@ -1,7 +1,7 @@
 {
     "name": "Filtru",
     "description": "The web is a messy place - Remove distractions, unwanted content, false info and more!",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "manifest_version": 3,
     "action": {
         "default_popup": "./renders/popup/main_popup.html"
@@ -20,5 +20,9 @@
     },
     "host_permissions":[
         "<all_urls>"
-    ]
+    ],
+    "web_accessible_resources": [{ 
+        "resources": ["renders/youtube_homepage.html"],
+        "matches": ["<all_urls>"]
+    }]
 }

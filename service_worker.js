@@ -17,20 +17,20 @@ chrome.runtime.onInstalled.addListener((details)=>{
     }
 });
 
-chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
-    if(isTabMeantForInspection() === false){
-        return console.log("Tab not meant for inspection")
+chrome.tabs.onUpdated.addListener(async function
+    (tabId, changeInfo, tab) {
+      if (changeInfo.url) {
+        if(isTabMeantForInspection() === false){
+            return console.log("Tab not meant for inspection")
+        }
+    
+        chrome.scripting.
+        executeScript({
+            target :{tabId: await getCurrentTabId()},
+            files: ["./functions/injector.js"]
+        })
+      }
     }
-
-    chrome.scripting.
-    executeScript({
-        target :{tabId: await getCurrentTabId()},
-        files: ["./functions/injector.js"]
-    })
-
-    console.log(await getCurrentTabInfo())
-
-    console.log("Tab Update - Injecting the script")
-})
+  );
 
 // chrome.runtime.setUninstallURL("./renders/awman.html")

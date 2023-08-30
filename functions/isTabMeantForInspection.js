@@ -7,7 +7,11 @@ export default async function isTabMeantForInspection(){
             return false
         }
 
-        if(tab.url.includes('filtru.co')){
+        if(tab.url.includes('filtru.xyz')){
+            return false
+        }
+
+        if(tab.url.includes('chrome-extension://')){
             return false
         }
 
