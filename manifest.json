@@ -1,10 +1,15 @@
 {
     "name": "Filtru",
-    "description": "The web is a messy place - Remove distractions, unwanted content, false info and more!",
-    "version": "0.0.3",
+    "description": "The web is a distracted place, make it focus on you.",
+    "version": "0.0.4",
     "manifest_version": 3,
     "action": {
         "default_popup": "./renders/popup/main_popup.html"
+    },
+    "icons": {
+        "16": "./cdn/16.png",
+        "48": "./cdn/48.png",
+        "128": "./cdn/128.png" 
     },
     "background": {
         "service_worker": "service_worker.js",
@@ -13,7 +18,8 @@
     "permissions": [
         "tabs",
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "content_security_policy":{
         "extension_page":"script-src 'self' 'unsafe-eval'; object-src 'self'"
@@ -22,7 +28,18 @@
         "<all_urls>"
     ],
     "web_accessible_resources": [{ 
-        "resources": ["renders/youtube_homepage.html"],
+        "resources": ["renders/youtube_homepage.html", "renders/passwordWeak.html"],
         "matches": ["<all_urls>"]
-    }]
+    }],
+    "externally_connectable": {
+        "matches": ["https://*.filtru.xyz/*", "http://127.0.0.1:5500/*", "http://localhost:3000/*"]
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Alt+Shift+P",
+                "mac": "MacCtrl+Command+P"
+            }
+        }
+    }
 }

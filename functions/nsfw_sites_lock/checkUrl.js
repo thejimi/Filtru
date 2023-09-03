@@ -1,4 +1,9 @@
-export default function checkUrl() {
+export default async function checkUrl() {
+    const result = await chrome.storage.local.get(["module_nsfwblocker"])
+    if(result.module_nsfwblocker === `disabled`){
+        return;
+    }
+
     chrome.tabs.query({
         active: true,
         lastFocusedWindow: true
@@ -22,12 +27,7 @@ export default function checkUrl() {
 
                 if(fetchedList.domains.includes(domain)){
                     chrome.tabs.query({ active: true }, function(tabs) {
-                        chrome.tabs.update(tabs[0].id, { url: `renders/filtru_nsfw/blocked.html?domain=${domain}` });
-                        chrome.scripting.executeScript(tabs[0].id, {
-                            func: () => {
-                              console.log("hey there buddy")
-                            }
-                          })
+                        chrome.tabs.update(tabs[0].id, { url: `https://app.filtru.xyz/render/nsfw_blocked.html?domain=${domain}` });
                     });  
 
                     return;
