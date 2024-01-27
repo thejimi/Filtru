@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="shortcut icon" href="/cdn/128.png" type="image/png">
+    <script src="/app/scripts/tailwind.js"></script>
+    <script src="/app/scripts/flowbite.js"></script>
+    <script src="/app/scripts/tailwind-config.js"></script>
+    <script src="/app/scripts/updateGreet.js"></script>
+    <script src="/app/scripts/quote.js"></script>
+    <script src="/app/scripts/fontawesome.js"></script>
+    <link rel="stylesheet" href="/app/style/cards.css">
+</head>
+<body class="bg-black">
+    <ul class="grid text-white mx-0">
+        <li class="grid__item">
+              <div class="card card--primary">
+                <div class="card__top">
+                    <figure class="card__figure">
+                        <img style="opacity:0.5" class="card__image" id="greetingIMG" src="/cdn/bg.png" width="400" height="300">
+                    </figure>
+                </div>
+                <div class="card__bottom">
+                    <h2 class="card__title text-center mb-0">
+                        <highlight class="selectn" id="greetingTXT"></highlight>
+                        <br>
+                        <p class="card_text text-sm" id="greetingTXT2"></p>
+                    </h2>                
+                </div>
+            </div>
+        </li>
+        <li class="grid__item" style="font: 400 100% 'Nunito', serif;">
+            <div class="card card--secondary card--reverse">
+                <div class="card__top">
+                    <a target="_blank" href="https://google.com/" id="motivationDefinition" class="card__tag">
+                        Meaning
+                    </a>
+                    <figure class="card__figure">
+                        <img id="motivationImage" style="opacity:0.3" src="/cdn/bg.png" class="card__image" width="400" height="300">
+                    </figure>
+                </div>
+                <div class="card__bottom">
+                    <h2 id="motivationTitle" class="card__title text-white" style="font-size:1.5rem"></h2>
+                    <p id="motivationDetails" class="card__text text-white"></p>
+                </div>
+            </div>
+        </li>
+        <li class="grid__item">
+            <div class="card card--secondary card--reverse">
+                <div class="card__top">
+                    <a target="_blank" href="https://filtru.xyz/link/discord" id="motivationDefinition" class="card__tag">
+                        Discord
+                    </a>
+                    &nbsp;&nbsp;
+                    <a target="_blank" href="https://ko-fi.com/jimiwtf" id="motivationDefinition" class="card__tag">
+                        Support the developer
+                    </a>
+                    <figure class="card__figure">
+                        <img id="motivationImage" style="opacity:0.3" src="https://filtru.xyz/api/cdn/extensionbg.png" class="card__image" width="400" height="300">
+                    </figure>
+                </div>
+                <div class="card__bottom">
+                    <h2 class="card__title text-center mb-0">
+                        <highlight class="selectn">Thank you,</highlight>
+                        <br>
+                        <p class="card_text text-sm">for using Filtru</p>
+                    </h2> 
+                </div>
+            </div>
+        </li>
+        <li class="grid__item text-black">
+            <div class="card card--tertiary2">
+                <div class="card__top">
+                    <span id="synctext" class="card__tag">
+                        <i class="fa-solid fa-layer-group"></i>&nbsp;&nbsp;Module
+                    </span>
+                    <!-- <figure class="card__figure">
+                        <img class="card__image" src="https://filtru.xyz/api/cdn/bg.png" width="400" height="100" />
+                    </figure> -->
+                </div>
+                <div class="card__bottom">
+                    <h2 class="card__title">
+                        Porn Website Blocking
+                    </h2>
+                    <p class="card__text">
+                        <button disabled="" style="margin:3px; cursor:not-allowed" class="mb-3 px-6 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80 text-sm bg-red-700">
+                            <i class="fa-solid fa-ban"></i> Cannot be disabled
+                        </button>
+                        <br>
+                        <a href="https://filtru.xyz/db/nsfw-websites" style="margin:3px; background-color: #202020;" class="px-6 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80 text-sm">
+                            <i class="fa-solid fa-database"></i> Website database
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="grid__item text-black">
+            <div class="card card--tertiary2">
+                <div class="card__top">
+                    <span id="synctext" class="card__tag">
+                        <i class="fa-solid fa-layer-group"></i>&nbsp;&nbsp;Module
+                    </span>
+                    <!-- <figure class="card__figure">
+                        <img class="card__image" src="https://filtru.xyz/api/cdn/bg.png" width="400" height="100" />
+                    </figure> -->
+                </div>
+                <div class="card__bottom">
+                    <h2 class="card__title">
+                        Nsfw Search Blocker
+                    </h2>
+                    <p class="card__text">
+                        <button disabled="" style="margin:3px; cursor:not-allowed" class="px-6 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80 text-sm bg-red-700">
+                            <i class="fa-solid fa-ban"></i> Cannot be disabled
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </li>
+      </ul>
+      
+</body>
+</html>

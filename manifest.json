@@ -1,0 +1,29 @@
+{
+    "name": "Filtru",
+    "description": "Destroy porn, before it destroys you.",
+    "version": "2.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./app/popup/popup.html"
+    },
+    "icons": {
+        "16": "./cdn/16.png",
+        "48": "./cdn/48.png",
+        "128": "./cdn/128.png" 
+    },
+    "background": { "service_worker": "service_worker.js", "type": "module" },
+    "minimum_chrome_version": "92",    
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "content_security_policy":{
+        "extension_page": "script-src 'self' https://*.tailwindcss.com/; object-src 'self'"
+    },
+    "host_permissions":[
+        "<all_urls>"
+    ],
+    "externally_connectable": {
+        "matches": ["https://filtru.xyz/*", "https://*.filtru.xyz/*", "http://127.0.0.1:5500/*", "http://localhost:3000/*", "<all_urls>", "https://cdn.tailwindcss.com/"]
+    }
+}

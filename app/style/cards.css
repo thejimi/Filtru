@@ -1,0 +1,114 @@
+:root {
+    --accent: #c7ecee;
+    --accentComplimentary: #7ed6df;
+}
+* {
+    box-sizing: border-box;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 35px;
+    padding: 60px 35px;
+    justify-content: center;
+}
+.card {
+    border-radius: 35px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__top {
+    position: relative;
+    background-color: var(--accentComplimentary);
+    padding: 35px 35px 70px 35px;
+    z-index: 0;
+    display: flex;
+    align-items: flex-start;
+}
+.card__top:has(.card__figure) {
+    aspect-ratio: 1.5;
+}
+.card__bottom {
+    position: relative;
+    margin-top: -35px;
+    background-color: var(--accent);
+    padding: 35px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    z-index: 1;
+}
+.card__figure {
+    position: absolute;
+    inset: 0;
+}
+.card__image {
+    object-fit: cover;
+}
+.card__tag {
+    padding: 10px 20px;
+    border: 2px solid currentColor;
+    border-radius: 2em;
+    position: relative;
+    z-index: 1;
+    color:white
+}
+.card__title {
+    font-size: 2.5rem;
+}
+.card__text {
+    font-size: 1.25rem;
+}
+.card--reverse {
+    flex-direction: column-reverse;
+}
+.card--reverse .card__bottom {
+    margin-top: 0;
+    margin-bottom: -35px;
+}
+.card--reverse .card__top {
+    position: relative;
+    padding: 70px 35px 35px 35px;
+    align-items: flex-end;
+}
+.card--primary {
+    --accent: #131516;
+    --accentComplimentary: #030303;
+}
+.card--primary2 {
+    --accent: #2b2b2b;
+    --accentComplimentary: #000000;
+}
+.card--secondary {
+    --accent: #1a1a1a;
+    --accentComplimentary: #000;
+}
+.card--secondary2 {
+    --accent: #deb63d;
+    --accentComplimentary: #ab8000;
+}
+.card--tertiary {
+    --accent: #363e66;
+    --accentComplimentary: #0b0b0b;
+}
+.card--tertiary2 {
+    --accent: #b2b2b2;
+    --accentComplimentary: #0b0b0b;
+}
+
+.card--extensionInstalled {
+    --accent: #67927b;
+    --accentComplimentary: #000000;
+}
+.sidBar {
+    position: fixed; /* Make the sidebar immovable*/
+    z-index: 1; /* Side bar stays at the top */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* restricting horizontal scroll */
+    }
