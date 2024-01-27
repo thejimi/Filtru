@@ -1,9 +1,10 @@
 import getRenderUrl from "./getRenderUrl.js";
+import nsfw_keywords from "../blacklist/nsfw_keywords.js";
 export default function searchEngineCheck(domain, url) {
     console.log(domain)
     console.log(url)
     var searchEngines = ['www.google', 'bing.com', 'duckduckgo.com', 'you.com'] //only these are supported
-    var triggerKeywords = ['porn', 'sex', 'hentai', 'loli', 'bang', 'fuck', 'squirt', 'onlyfans', ' ph ', 'pron', 'the hub', 'masturbation', ' fap ', 'blowing', 'blowjob', 'blow job', 'handjob', 'hand job', " OF ", "thicc", "hot"]
+    var triggerKeywords = nsfw_keywords()
 
     if(url.includes("&FILTRUIGNORESEARCHENGINEBLOCKED=true")){
         return;
