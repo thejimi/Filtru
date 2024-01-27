@@ -19,7 +19,7 @@ export default function checkUrl() {
         }
 
         function fetchAndCheck(domainName){
-            fetch('https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json') //a list of nsfw websites.
+            fetch('https://raw.githubusercontent.com/thejimi/Filtru/main/blacklist/porn_domains.json') //a list of nsfw websites.
             .then((response) => response.json())
             .then((fetchedList) => {
                 var domain = domainName.toString().split('.').reverse().splice(0,2).reverse().join('.')
