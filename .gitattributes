@@ -1,2 +1,4 @@
 app/popup/* linguist-documentation
 app/render/* linguist-documentation
+app/style/* linguist-documentation
+app/settings.html linguist-documentation
