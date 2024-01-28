@@ -5,8 +5,7 @@ async function getRandomQuote(){
     const quote = `<span onclick='window.open(\`https://google.com/search?q="${res[0].content}" meaning\`)'>${res[0].content}  ~ </span><span onclick='window.open(\`https://google.com/search?q=${res[0].author}\`)'>${res[0].author}</span>`
     document.getElementById("motivationTitle").innerHTML = `${res[0].content}`
     document.getElementById("motivationDetails").innerHTML = `~ ${res[0].author}`
-    document.getElementById("motivationImage").src = `https://filtru.xyz/api/useless/googleimagesearch/${res[0].author}`
-    document.getElementById("motivationDefinition").href = `https://filtru.xyz/link/custom?url=https://google.com/search?q="${res[0].content}" meaning`
+    document.getElementById("motivationDefinition").href = `https://google.com/search?q="${res[0].content}" meaning`
 }
 
 setTimeout(() => {
