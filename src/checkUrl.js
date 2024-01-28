@@ -1,5 +1,6 @@
 import getRenderUrl from "./getRenderUrl.js";
 import searchEngineCheck from "./searchEngineCheck.js";
+import linktreeCheck from "./linktreeCheck.js";
 
 export default function checkUrl() {
     chrome.tabs.query({
@@ -14,6 +15,7 @@ export default function checkUrl() {
 
             fetchAndCheck(domain)
             searchEngineCheck(domain, tab.url)
+            linktreeCheck(domain, tab.url)
         } catch (err) {
 
         }

@@ -6,7 +6,7 @@ export default function searchEngineCheck(domain, url) {
     var searchEngines = ['www.google', 'bing.com', 'duckduckgo.com', 'you.com'] //only these are supported
     var triggerKeywords = nsfw_keywords()
 
-    if(url.includes("&FILTRUIGNORESEARCHENGINEBLOCKED=true")){
+    if(url.includes("Filtru_Allowed_Search=true")){
         return;
     }
 
