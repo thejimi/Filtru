@@ -19,7 +19,7 @@ function updateGreet(){
         return greetingTXT.innerHTML = `Good evening!`
     } else {
         greetingIMG.src = `https://filtru.xyz/cdn/night.jpg`
-        greetingTXT2.innerHTML = `Go to sleep! 🫡`
+        greetingTXT2.innerHTML = `Go to sleep!`
         return greetingTXT.innerHTML = `Goodnight`
     }
 }
